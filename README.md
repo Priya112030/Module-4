@@ -44,7 +44,7 @@ To write a Python program that merges *two dictionaries* and combines their key-
 3. Call the merge() function and print the merged dictionary.
 
 ## 🧾 Program
-
+```
 dict1={'Ten': 10,'Twenty': 20,'Thirty': 30} 
 dict2={'Thirty': 30,'Fourty': 40,'Fifty': 50} def 
 merge (dict1,dict2): 
@@ -52,7 +52,7 @@ res={**dict1 , **dict2} return
 res 
 dict3=merge(dict1,dict2) 
 print(dict3)
-
+```
 ## Output
 ![Screenshot (145)](https://github.com/user-attachments/assets/e8333efb-3f5c-488e-bca7-cb30b9252da2)
 
@@ -91,7 +91,7 @@ To write a Python program that sorts a dictionary's:
 ---
 
 ## 🧪Program
-
+```
 def dictionairy():  
  key_value ={}   
  key_value[2] = 56      
@@ -107,7 +107,7 @@ def dictionairy():
 def main():
     
     dictionairy()           
-
+```
 
 ## Sample Output
 ![image](https://github.com/user-attachments/assets/f19f2bd9-a6f6-4aa4-a418-0d570459faa2)
