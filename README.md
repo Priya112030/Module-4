@@ -73,23 +73,17 @@ To write a Python program that sorts a dictionary's:
 - Keys in alphabetical order
 - Values in alphabetical order
 
----
+
 
 ## 🧠 Algorithm
-
-1. *Start the program.*
-2. *Define* a dictionary with key-value pairs.
-3. *Sort by Keys*:
-   - Use sorted(dictionary.items())
-   - Convert the result to a dictionary using dict()
-4. *Sort by Values*:
-   - Use sorted(dictionary.items(), key=lambda item: item[1])
-   - Convert the result to a dictionary using dict()
-5. *Display* the original and sorted dictionaries.
-6. *End the program.*
-
----
-
+```
+1.Start the program.
+2.Create an empty dictionary and add key-value pairs.
+3.Sort the dictionary items by their values using sorted() with a lambda function.
+4.Store the sorted result in a variable.
+5.Print a message and the sorted key-value pairs.
+6.End the program.
+```
 ## 🧪Program
 ```
 def dictionairy():  
@@ -108,13 +102,10 @@ def main():
     dictionairy()
            
 ```
-
 ## Sample Output
 ![image](https://github.com/user-attachments/assets/f19f2bd9-a6f6-4aa4-a418-0d570459faa2)
 
-
 ## Result
-
 The program successfully sorts the dictionary by its keys and values in alphabetical order and prints both sorted versions along with the original dictionary.
 
 # Exception Handling in Python: Avoiding Index Errors
@@ -123,6 +114,7 @@ The program successfully sorts the dictionary by its keys and values in alphabet
 To write a Python program that handles an **IndexError** when trying to access an element beyond the available range of a list.
 
 ## 🧠 Algorithm
+
 1. Define a list `list1` with some integer elements.
 2. Use a **try-except** block:
    - In the `try` block, attempt to access an index that is out of range (e.g., `list1[5]`).
@@ -131,53 +123,55 @@ To write a Python program that handles an **IndexError** when trying to access a
 
 ## 🧾 Program
 ```
+lst=[5, 10, 20]
 try:
-    # Taking 3 elements input from the user
-    L = []
-    for i in range(3):
-        item = ['laptop','mobile','pen']
-        L.append(item)
+    print(lst[5])
+except:
+    print("You're out of list range")
 
-    # Trying to access index 4
-    print(L[4])
-
-except IndexError:
-    print("check index range")
 ```
 
 ## Output
-![438930470-b2acd206-0aeb-4ec2-a40f-e911fa9e5066](https://github.com/user-attachments/assets/6c9076bc-1fff-48fb-8d14-1b42c1c9de32)
+
+![image](https://github.com/user-attachments/assets/8c4d79a2-1777-48d6-be3c-d7ce544baf1c)
+
 
 ## Result
-Thus the program executed successfully.
+Thus th program  that handles an **IndexError** when trying to access an element beyond the available range of a list has been executed successfully.
 
 # File Handling in Python: Count Lines Not Starting with 'T'
 ## 🎯 Aim
-To write a Python program that counts the number of lines in a text file story.txt that do *not* start with the alphabet 'T'.
+To write a Python program that counts the number of words in a text file .
 
 ## 🧠 Algorithm
-1. Open the file story.txt in *read mode*.
-2. Initialize a counter count to zero.
-3. Iterate through each line of the file:
-   - Check if the first character of the line is *not* 'T'.
-   - If the line does not start with 'T', increment the count by 1.
-4. After processing all lines, print the count value, which represents the number of lines that do not start with 'T'.
-
+```
+1.Start the program.
+2.Define a function create_file(file_path, file_content) that:
+   Opens a file at file_path in write mode
+    Writes file_content to the file
+3.Define another function count_words_in_file(file_path) that:
+    Opens the file at file_path in read mode
+     Reads the content and splits it into words
+     Returns the number of words
+4.Call create_file() with desired file path and content to create/write the file.
+5.Call count_words_in_file() to get the total word count from the file.
+6.End the program.
+```
 ## 🧾 Program
 ```
-def returnSum(myDict):
-    final=0
-    for i in myDict.values():
-        final+=i
-    return final
-#driver functions
-
-myDict = {'a': 100, 'b': 200, 'c': 300}
-print("Sum :",returnSum(myDict))
+def create_file(file_path,file_content):
+    with open(file_path,'w')as file:
+        file.write(file_content)
+def count_words_in_file(file_path):
+    with open(file_path,'r')as file:
+         content=file.read()
+         words=content.split()
+         return len(words)
 ```
 
 ## Output
-![Screenshot (148)](https://github.com/user-attachments/assets/584ecff1-9dfb-4670-b1c8-ee354a85ed3d)
+![image](https://github.com/user-attachments/assets/6ad88cd2-e8cf-46d7-a6fb-38f02403077e)
+
 
 ## Result
-Thus,the program has been executed successfully.
+Thus,the program  that counts the number of words in a text file has been executed successfully.
